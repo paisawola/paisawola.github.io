@@ -1,86 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Paisa Wola</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #f4b400;
+      color: #000;
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 1em;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0.2em 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.8em 1.5em;
+      background-color: black;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    .section {
+      padding: 2em 1em;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .blog-card {
+      background: white;
+      padding: 1.5em;
+      margin-top: 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 3em;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
-  <header class="bg-yellow-400 py-6 shadow-md">
-    <div class="container mx-auto flex flex-col items-center">
-      <img src="1000023953.png" alt="Paisa Wola Logo" class="w-24 h-24 mb-4 rounded-full">
-      <h1 class="text-3xl font-bold">Paisa Wola</h1>
-      <p class="text-lg">Helping you take control of your money</p>
-      <a href="#videos" class="mt-4 px-4 py-2 bg-black text-white rounded-full">Watch My Videos</a>
-    </div>
+<body>
+
+  <header>
+    <img src="1000051399.jpg" alt="Paisa Wola Logo" />
+    <h1>Paisa Wola</h1>
+    <p>Helping you take control of your money</p>
+    <a href="#videos" class="btn">Watch My Videos</a>
   </header>
 
-  <main class="container mx-auto px-4 py-10">
-    <section id="videos" class="mb-16">
-      <h2 class="text-2xl font-bold mb-4">Latest Video</h2>
-      <div class="aspect-w-16 aspect-h-9">
-        <iframe class="w-full h-64" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </section>
+  <section class="section" id="videos">
+    <h2>Latest Video</h2>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/_U5XC_mB2Ds" allowfullscreen></iframe>
+    </div>
+  </section>
 
-    <section id="about" class="mb-16">
-      <h2 class="text-2xl font-bold mb-4">About Me</h2>
-      <p class="text-gray-700">
-        Welcome to <strong>Paisa Wola</strong> — your go-to place for personal finance advice in simple language. 
-        I create videos to help you save more, spend smartly, and invest wisely.
-        Whether you're just starting your financial journey or looking to level up, you'll find practical tips and tools here.
-        My goal is to make money management easy and empowering for everyone.
-      </p>
-    </section>
+  <section class="section" id="blog">
+    <h2>Latest Blog</h2>
+    <div class="blog-card">
+      <h3>You can make 1 crore by saving ₹5000 a month</h3>
+      <p>It may sound impossible, but with disciplined investing and compound interest, ₹5000 a month can grow into ₹1 crore over time. Learn how SIPs and long-term planning can help you build wealth from small savings.</p>
+    </div>
+  </section>
 
-    <section id="resources" class="mb-16">
-      <h2 class="text-2xl font-bold mb-4">Free Resources</h2>
-      <ul class="list-disc list-inside text-gray-700">
-        <li><a href="#" class="text-yellow-600 underline">Download Budget Template (Coming Soon)</a></li>
-        <li><a href="#" class="text-yellow-600 underline">Track Your Expenses Worksheet</a></li>
-        <li><a href="#" class="text-yellow-600 underline">Top 5 Saving Hacks</a></li>
-      </ul>
-    </section>
-
-    <section id="blog" class="mb-16">
-      <h2 class="text-2xl font-bold mb-4">Latest Blog Posts</h2>
-      <ul class="space-y-4">
-        <li>
-          <a href="#" class="block p-4 bg-gray-100 hover:bg-yellow-100 rounded-lg">
-            <h3 class="text-xl font-semibold">5 Easy Ways to Save Money Every Month</h3>
-            <p class="text-sm text-gray-600">Practical tips you can apply right away to grow your savings.</p>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block p-4 bg-gray-100 hover:bg-yellow-100 rounded-lg">
-            <h3 class="text-xl font-semibold">Why Budgeting Isn’t Boring – It’s Freedom</h3>
-            <p class="text-sm text-gray-600">Learn how a simple budget gives you peace of mind.</p>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="newsletter" class="mb-16">
-      <h2 class="text-2xl font-bold mb-4">Join My Newsletter</h2>
-      <form class="max-w-md mx-auto">
-        <input type="email" placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded-md mb-4" required>
-        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-md">Subscribe</button>
-      </form>
-    </section>
-
-    <section id="contact">
-      <h2 class="text-2xl font-bold mb-4">Connect With Me</h2>
-      <div class="flex flex-wrap gap-4">
-        <a href="https://youtube.com/@paisawola" class="text-blue-600 hover:underline">YouTube</a>
-        <a href="https://instagram.com/paisawola" class="text-pink-500 hover:underline">Instagram</a>
-        <a href="mailto:paisawola@gmail.com" class="text-green-600 hover:underline">Email</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-yellow-400 py-4 text-center">
-    <p class="text-sm">&copy; 2025 Paisa Wola. All rights reserved.</p>
+  <footer>
+    &copy; 2025 Paisa Wola. All rights reserved.
   </footer>
+
 </body>
 </html>
